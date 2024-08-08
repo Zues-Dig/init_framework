@@ -1,0 +1,20 @@
+server:
+  port: 9211
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: pets
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: pets
+    url: jdbc:mysql://localhost:3306/pets?useUnicode=yes&&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+    password: 123456
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  mapper-locations: classpath*:mapper/*.xml
